@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA3B2E85-A6EB-4918-BCF5-871A18EA4AC4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WarSISModelsDB</RootNamespace>
+    <AssemblyName>WarSISModelsDB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\portable-net40+sl4+win8+wp8\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WarSISDataBase">
+      <HintPath>..\..\WarSISDataBase\WarSISDataBase\bin\Release\WarSISDataBase.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\AData.cs" />
+    <Compile Include="Models\DataBase\Buildings.cs" />
+    <Compile Include="Models\DataBase\Peoples.cs" />
+    <Compile Include="Models\DataBase\Property\IDataBaseProperties.cs" />
+    <Compile Include="Models\DataBase\Property\PropertiesInSubdivissions.cs" />
+    <Compile Include="Models\DataBase\Property\Properties.cs" />
+    <Compile Include="Models\DataBase\Property\Artilleries.cs" />
+    <Compile Include="Models\DataBase\Property\Authomats.cs" />
+    <Compile Include="Models\DataBase\Property\Automobils.cs" />
+    <Compile Include="Models\DataBase\Property\BMPs.cs" />
+    <Compile Include="Models\DataBase\Property\Carabins.cs" />
+    <Compile Include="Models\DataBase\Property\RocketAmmos.cs" />
+    <Compile Include="Models\DataBase\Property\Tractors.cs" />
+    <Compile Include="Models\DataBase\Rank\Captains.cs" />
+    <Compile Include="Models\DataBase\Rank\Colonels.cs" />
+    <Compile Include="Models\DataBase\Rank\Corporals.cs" />
+    <Compile Include="Models\DataBase\Rank\Ensigns.cs" />
+    <Compile Include="Models\DataBase\Rank\Generals.cs" />
+    <Compile Include="Models\DataBase\Rank\IDataBaseRanks.cs" />
+    <Compile Include="Models\DataBase\Rank\Lieutenants.cs" />
+    <Compile Include="Models\DataBase\Rank\LtColonels.cs" />
+    <Compile Include="Models\DataBase\Rank\Majors.cs" />
+    <Compile Include="Models\DataBase\Rank\Sergeants.cs" />
+    <Compile Include="Models\DataBase\Rank\SgMajors.cs" />
+    <Compile Include="Models\DataBase\Rank\Soldiers.cs" />
+    <Compile Include="Models\DataBase\Roles.cs" />
+    <Compile Include="Models\DataBase\Speciality\OwnedSpecialities.cs" />
+    <Compile Include="Models\DataBase\Speciality\Specialities.cs" />
+    <Compile Include="Models\DataBase\States.cs" />
+    <Compile Include="Models\DataBase\Subdivision\Armies.cs" />
+    <Compile Include="Models\DataBase\Subdivision\Battalions.cs" />
+    <Compile Include="Models\DataBase\Subdivision\Branches.cs" />
+    <Compile Include="Models\DataBase\Subdivision\Brigades.cs" />
+    <Compile Include="Models\DataBase\Subdivision\Companies.cs" />
+    <Compile Include="Models\DataBase\Subdivision\Corpses.cs" />
+    <Compile Include="Models\DataBase\Subdivision\Divisions.cs" />
+    <Compile Include="Models\DataBase\Subdivision\IDataBaseSubdivisions.cs" />
+    <Compile Include="Models\DataBase\Subdivision\Platoons.cs" />
+    <Compile Include="Models\DataBase\Subdivision\Regiments.cs" />
+    <Compile Include="Models\DataBase\Subdivision\Subdivisions.cs" />
+    <Compile Include="Models\DataBase\Users.cs" />
+    <Compile Include="Models\Data\Building.cs" />
+    <Compile Include="Models\Data\Role.cs" />
+    <Compile Include="Models\Data\Speciality\OwnedSpeciality.cs" />
+    <Compile Include="Models\Data\People.cs" />
+    <Compile Include="Models\Data\Property\PropertyInSubdivision.cs" />
+    <Compile Include="Models\Data\Speciality\Speciality.cs" />
+    <Compile Include="Models\Data\State.cs" />
+    <Compile Include="Models\Data\Subdivisions\Branch.cs" />
+    <Compile Include="Models\Data\Subdivisions\Company.cs" />
+    <Compile Include="Models\Data\Subdivisions\Regiment.cs" />
+    <Compile Include="Models\Data\Subdivisions\Army.cs" />
+    <Compile Include="Models\Data\Subdivisions\Battalion.cs" />
+    <Compile Include="Models\Data\Subdivisions\Brigade.cs" />
+    <Compile Include="Models\Data\Subdivisions\Corps.cs" />
+    <Compile Include="Models\Data\Subdivisions\Division.cs" />
+    <Compile Include="Models\Data\Subdivisions\Subdivision.cs" />
+    <Compile Include="Models\Data\Subdivisions\ISubdivision.cs" />
+    <Compile Include="Models\Data\Subdivisions\Platoon.cs" />
+    <Compile Include="Models\Data\Ranks\Captain.cs" />
+    <Compile Include="Models\Data\Ranks\Colonel.cs" />
+    <Compile Include="Models\Data\Ranks\Corporal.cs" />
+    <Compile Include="Models\Data\Ranks\Lieutenant.cs" />
+    <Compile Include="Models\Data\Ranks\LtColonel.cs" />
+    <Compile Include="Models\Data\Ranks\Major.cs" />
+    <Compile Include="Models\Data\Ranks\Ensign.cs" />
+    <Compile Include="Models\Data\Ranks\General.cs" />
+    <Compile Include="Models\Data\Property\Artillery.cs" />
+    <Compile Include="Models\Data\Property\Automobil.cs" />
+    <Compile Include="Models\Data\Property\BMP.cs" />
+    <Compile Include="Models\Data\Property\Carabin.cs" />
+    <Compile Include="Models\Data\Property\Property.cs" />
+    <Compile Include="Models\Data\Property\Automat.cs" />
+    <Compile Include="Models\Data\Property\IProperty.cs" />
+    <Compile Include="Models\Data\Ranks\IRank.cs" />
+    <Compile Include="Models\Data\Property\Tractor.cs" />
+    <Compile Include="Models\Data\Property\RocketAmmo.cs" />
+    <Compile Include="Models\Data\Ranks\Sergeant.cs" />
+    <Compile Include="Models\Data\Ranks\SgMajor.cs" />
+    <Compile Include="Models\Data\Ranks\Soldier.cs" />
+    <Compile Include="Models\Data\User.cs" />
+    <Compile Include="Models\IDataBaseElement.cs" />
+    <Compile Include="Models\IDataElement.cs" />
+    <Compile Include="ObjectConvertExtension.cs" />
+    <Compile Include="Models\DataBase\Rank\Ranks.cs" />
+    <Compile Include="Models\Data\Ranks\Rank.cs" />
+    <Compile Include="Models\ADataBase.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
